@@ -1,0 +1,55 @@
+.list__panel {
+
+}
+.list__header {
+    margin-left: 45px;
+    color: #E84393;
+    margin-bottom: 0px;
+}
+
+.list__header_toolbar {
+    display:grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 16px;
+}
+
+.list__header_date {
+    color: #74B9FF;
+    font-weight: 700;
+}
+
+
+.list__header_actions {
+    justify-self: end;
+}
+
+.list__edit_btn {
+    background-color: #E0E7EA;
+    padding: 8px 16px;
+    color: white;
+    border: 0;
+    border-radius: 0;
+    font-size: medium;
+    margin: 0px 4px;
+}
+
+.list__play_btn {
+    background-color: #00B894;
+    padding: 8px 16px;
+    color: white;
+    border: 0;
+    border-radius: 0;
+    font-size: medium;
+    margin: 0px 4px;
+}
+
+.list_item__panel {
+    display: grid;
+    grid-template-columns: 30px 30px auto 100px;
+    border-bottom: 1px solid #DFE6E9;
+    margin: 4px 15px;
+}
+
+.list_item__time {
+    justify-self: end;
+}
