@@ -7,6 +7,7 @@ import {
 import {
     GoTriangleRight
 } from 'react-icons/go'
+import dateFormat from 'dateformat'
 
 function ListItem(props) {
     return <div className = "list_item__panel">
@@ -36,6 +37,7 @@ class List extends React.Component {
         super(props);
 
         this.state = {
+            date: new Date(),
             list_items: [
                 {list_name: "Do Something1", list_time_min: 5, complete: true},
                 {list_name: "Do Something2", list_time_min: 5, complete: false},
@@ -46,7 +48,7 @@ class List extends React.Component {
     }
 
     onChangeChecked(index) {
-        if(index == this.state.current) {   
+        if(index === this.state.current) {   
             let new_state = this.state;
             new_state.list_items[index].complete = !new_state.list_items[index].complete
             new_state.current = new_state.current + 1
@@ -66,13 +68,14 @@ class List extends React.Component {
                         current = {idx === this.state.current}/>
         }, this)
     
+
         return (
             <div className = "list__panel">
                 <div className = "list__header">
                     <h2 className = "list__day_name">Today</h2>
                     <div className = "list__header_toolbar">
                         <div className = "list__header_date">
-                            Monday, April 20
+                            {dateFormat(this.state.date, "dddd, mmmm dS")}
                         </div>
                         <div className = "list__header_actions">
                             <button className = "list__edit_btn">Edit</button>

@@ -21,6 +21,7 @@
 
 .list__header_actions {
     justify-self: end;
+    padding-right: 15px;
 }
 
 .list__edit_btn {
@@ -30,7 +31,7 @@
     border: 0;
     border-radius: 0;
     font-size: medium;
-    margin: 0px 4px;
+    margin: 0px 0px 0px 8px;
 }
 
 .list__play_btn {
@@ -40,12 +41,12 @@
     border: 0;
     border-radius: 0;
     font-size: medium;
-    margin: 0px 4px;
+    margin: 0px 0px 0px 8px;
 }
 
 .list_item__panel {
     display: grid;
-    grid-template-columns: 30px 30px auto 100px;
+    grid-template-columns: 30px 40px auto 100px;
     border-bottom: 1px solid #DFE6E9;
     margin: 4px 15px;
 }

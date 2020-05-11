@@ -4,11 +4,13 @@ import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 import List from './components/list/list';
+import Timer from './components/timer/timer';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
       <div style = {{maxWidth: "800px"}}>
+        <Timer />
         <List />
       </div>
   </React.StrictMode>,
