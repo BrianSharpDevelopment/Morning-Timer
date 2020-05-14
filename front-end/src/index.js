@@ -10,8 +10,8 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
       <div style = {{maxWidth: "800px"}}>
-        <Timer />
-        <List />
+        <Timer taskname = "Medicare"/>
+        {/* <List /> */}
       </div>
   </React.StrictMode>,
   document.getElementById('root')
