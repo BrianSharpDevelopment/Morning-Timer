@@ -19,18 +19,12 @@ ReactDOM.render(
         <main>
           <Switch>
             
-            <Route path = "/timer">
-              <div className = "timer_display">
-                <List />
-                <Timer taskname = "Meditate"/>
-              </div>
-            </Route>
-
-            <Route path = "/list">
-              <div style = {{maxWidth: "800px"}}>
-                <List />
-              </div>
-            </Route>
+            {Home()}
+            {Today()}
+            {Tomorrow()}
+            {Calendar()}
+            {Tips()}
+            {Profile()}
   
           </Switch>
         </main>
@@ -42,3 +36,53 @@ ReactDOM.render(
 );
 
 // Pages
+function Home() {
+  return <Route path = "/home">
+    <div>
+      <h3>Home</h3>
+    </div>
+  </Route>
+}
+
+
+function Today() {
+  return <Route path = "/today">
+    <div className = "timer_display">
+        <List />
+        <Timer taskname = "Meditate"/>
+      </div>
+  </Route>
+}
+
+function Tomorrow() {
+  return <Route path = "/tomorrow">
+    <div className = "timer_display">
+      <List />
+      <Timer taskname = "Meditate"/>
+    </div>
+  </Route>
+}
+
+function Calendar() {
+  return <Route path = "/calendar">
+    <div>
+      <h3>Calendar</h3>
+    </div>
+  </Route>
+}
+
+function Tips() {
+  return <Route path = "/tips">
+    <div>
+      <h3>Tips</h3>
+    </div>
+  </Route>
+}
+
+function Profile() {
+  return <Route path = "/profile">
+    <div>
+      <h3>Profile</h3>
+    </div>
+  </Route>
+}

@@ -15,9 +15,15 @@ class NavigationBar extends React.Component {
             <li><Link to="/home">Home</Link></li>
             <hr />
             <ul>
-                <li><Link to="/timer">Today</Link></li>
-                <li><Link to="/list">Tomorrow</Link></li>
-                <li><Link to="/list">Calendar</Link></li>
+                <li><Link to="/today">Today</Link></li>
+                <li><Link to="/tomorrow">Tomorrow</Link></li>
+                <li><Link to="/calendar">Calendar</Link></li>
+                <li><Link to="/tips">Tips</Link></li>
+                <li>
+                    <Link to="/profile">
+                        Setting
+                    </Link>
+                </li>
             </ul>
         </nav>
     }
