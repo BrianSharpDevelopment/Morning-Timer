@@ -1,3 +1,5 @@
 module.exports = {
-    user: 'user'
+    user: 'user',
+    routine: 'routine',
+    task: 'task',
 }
