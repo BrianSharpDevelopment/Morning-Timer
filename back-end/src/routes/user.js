@@ -91,7 +91,7 @@ exports.login = async function(req, res) {
 
     if(compare_password) {
         // success - create jwt token and return
-        var token = jwt.sign({ id: user[0].id }, config.jwt_secret, {
+        var token = jwt.sign({ id: user[0].id }, config.JWT_SECRET, {
             expiresIn: 86400 // expires in 24 hours
           });
 

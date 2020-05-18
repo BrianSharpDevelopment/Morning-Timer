@@ -1,1 +1,1 @@
-exports.jwt_secret = "8675309"
+exports.JWT_SECRET = "8675309"

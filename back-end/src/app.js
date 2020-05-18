@@ -2,10 +2,12 @@ const express = require('express');
 const morgan = require('morgan');
 const compression = require('compression');
 const helmet = require('helmet');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 // routes
-const user = require('./routes/user')
+const user = require('./routes/user');
+const routine = require('./routes/routine');
+const utils = require('./routes/utils');
 
 const app = express();
 
@@ -26,6 +28,9 @@ app.use(function(req, res, next) {
 
 // User
 app.post("/user/register", user.register);
-app.post("/user/login", user.login)
+app.post("/user/login", user.login);
+
+// Routine
+app.post("/routine", utils.verifyToken, routine.createRoute);
 
 module.exports = app;
