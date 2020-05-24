@@ -9,9 +9,19 @@ exports.up = async (knex) => {
         table.text("last_name").notNullable();
         table.text("password", 500).notNullable();
         table.datetime("last_login", {useTz: true});
+        table.boolean("email_verified").notNullable().defaultTo(false);
         table.timestamp("created_at", {useTz: true}).notNullable().defaultTo(knex.fn.now());
         table.timestamp("updated_at", {useTz: true}).notNullable().defaultTo(knex.fn.now());
         table.timestamp("deleted_at", {useTz: true});
+    })
+
+    await knex.schema.createTable(tableNames.userVerifiedCode, (table) => {
+        table.increments().notNullable();
+        table.integer("user_id").notNullable();
+        table.string("code").notNullable();
+        table.timestamp("created_at", {useTz: true}).notNullable().defaultTo(knex.fn.now());
+        table.timestamp("verified_at", {useTz: true});
+        table.timestamp("deleted_at", {userTz: true});
     })
 
     await knex.schema.createTable(tableNames.routine, (table) => {
@@ -39,6 +49,7 @@ exports.up = async (knex) => {
 
 exports.down = async (knex) => {
     await knex.schema.dropTable(tableNames.user);
+    await knex.schema.dropTable(tableNames.userVerifiedCode);
     await knex.schema.dropTable(tableNames.routine);
     await knex.schema.dropTable(tableNames.task);
 };

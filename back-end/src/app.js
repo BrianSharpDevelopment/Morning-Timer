@@ -29,6 +29,7 @@ app.use(function(req, res, next) {
 // User
 app.post("/user/register", user.register);
 app.post("/user/login", user.login);
+app.post("/user/verify", user.verifyUser);
 
 // Routine
 app.post("/routine", utils.verifyToken, routine.createRoute);

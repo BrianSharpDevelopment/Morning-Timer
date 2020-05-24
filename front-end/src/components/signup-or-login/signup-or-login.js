@@ -64,28 +64,27 @@ class LoginForm extends React.Component {
 
     render() {
         return <form>
-            <div className = "row">
-                <div className = "col">
-                    <div className = "field">
-                        <input className = "input" type = "email" name = "email" placeholder = " "></input> 
-                        <label className = "label" for ="email">Email</label>
+                <div className = "row">
+                    <div className = "col">
+                        <div className = "field">
+                            <input className = "input" type = "email" name = "email" placeholder = " "></input> 
+                            <label className = "label" for ="email">Email</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className = "row">
-                <div className = "col">
-                    <div className = "field">
-                        <input className = "input" type = "text" name = "password" placeholder = " "></input>
-                        <label className = "label" for ="password">Password</label>
+                <div className = "row">
+                    <div className = "col">
+                        <div className = "field">
+                            <input className = "input" type = "text" name = "password" placeholder = " "></input>
+                            <label className = "label" for ="password">Password</label>
+                        </div>
                     </div>
+                </div>            
+                
+                <div className = "submitRow">
+                    <button >Log In</button>
                 </div>
-            </div>            
-            
-            <div className = "submitRow">
-                <button >Log In</button>
-
-            </div>
-        </form>
+            </form>
     }
 
 }
@@ -108,6 +107,7 @@ class SignupOrLoginForm extends React.Component {
         this.setState(currentState);
     }
 
+    submitSignUpForm()
 
     // submitForm(event) {
     //     event.preventDefault();
@@ -127,7 +127,9 @@ class SignupOrLoginForm extends React.Component {
     // }
 
     render() {
-        return <div className = "login__panel">
+        return <div className = "signup_or_login__main" >
+                
+        <div className = "login__panel">
             <div className = "login__logo">
                 Make <br />
                 My <br />
@@ -148,6 +150,7 @@ class SignupOrLoginForm extends React.Component {
                 </div>
                 
             </div>
+        </div>
         </div>
     }
 }

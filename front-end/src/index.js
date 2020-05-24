@@ -28,8 +28,11 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Route path = "/login" component={SignupOrLoginForm} />
+      <Route path = "/(signup|login)" component={SignupOrLoginForm} />
       <PrivateRoute path = "/(|home)" component={Timer} />
+      <Route>
+        <h4>404 Page</h4>
+      </Route>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
