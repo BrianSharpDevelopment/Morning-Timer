@@ -17,23 +17,17 @@ const saltRounds = 10;
 exports.register = async function(req, res) {
     const password = req.body.password;
     const email = req.body.email;
-    const name = req.body.name;
+    const first_name = req.body.first_name;
+    const last_name = req.body.last_name;
 
-    if (!password) {
-        res.send({code: 400, message: "Missing required parameter: password"})
-        return;
-    }
+    if (!password) return res.status(400).send({message: "Missing required parameter: password"});
 
-    if (!email) {
-        res.send({code: 400, message: "Missing required parameter: email"})
-        return;
-    }
+    if (!email) return res.status(400).send({message: "Missing required parameter: email"});
 
-    if (!name) {
-        res.send({code: 400, message: "Missing required parameter: name"})
-        return;
-    }
-    
+    if (!first_name) return res.status(400).send({message: "Missing required parameter: first_name"});
+
+    if (!last_name) return res.status(400).send({message: "Missing required parameter: last_name"});
+
     const encryptedPassword = await bcrypt.hash(password, saltRounds);
 
     // Check if user already exists
@@ -51,7 +45,8 @@ exports.register = async function(req, res) {
 
     const user = {
         "email": req.body.email,
-        "name": req.body.name,
+        "first_name": req.body.first_name,
+        "last_name": req.body.last_name,
         "password": encryptedPassword
     };
 

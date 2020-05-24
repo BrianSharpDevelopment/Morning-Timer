@@ -26,4 +26,8 @@ exports.createRoute = async function(req, res, next){
     return res.status(200).send({message: "success", routine: routine});
 };
 
+exports.getRoutine = async function(req, res) {
 
+    const userId = req.userId;
+    
+}

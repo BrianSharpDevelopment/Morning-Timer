@@ -5,7 +5,8 @@ exports.up = async (knex) => {
     await knex.schema.createTable(tableNames.user, (table) => {
         table.increments().notNullable(); //Create ID Column
         table.string("email", 254).notNullable(); 
-        table.text("name").notNullable();
+        table.text("first_name").notNullable();
+        table.text("last_name").notNullable();
         table.text("password", 500).notNullable();
         table.datetime("last_login", {useTz: true});
         table.timestamp("created_at", {useTz: true}).notNullable().defaultTo(knex.fn.now());
