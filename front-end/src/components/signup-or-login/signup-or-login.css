@@ -179,3 +179,9 @@
     color: white;
     font-size: 18px;
 }
+
+.alert {
+    color: #E84393;
+    font-weight: 800;
+    padding: 0px 8px;
+}

@@ -8,9 +8,19 @@ import {
 } from "react-router-dom";
 import Timer from './components/timer/timer';
 import SignupOrLoginForm from './components/signup-or-login/signup-or-login';
+import Cookie from 'js-cookie';
+
+function has_token() {
+  let token = Cookie.get("jwt_token");
+  return (!!token);
+}
+
+function clear_token() {
+  Cookie.remove("jwt_token");
+}
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const isLoggedIn = false;
+  const isLoggedIn = has_token();
   return (
     <Route
       {...rest}
@@ -28,11 +38,15 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Route path = "/(signup|login)" component={SignupOrLoginForm} />
-      <PrivateRoute path = "/(|home)" component={Timer} />
-      <Route>
-        <h4>404 Page</h4>
-      </Route>
+        <Route 
+          path = "/(signup)" 
+          component={() => <SignupOrLoginForm form = "signUp" />}
+        />
+        <Route 
+          path = "/(login)" 
+          component={() => <SignupOrLoginForm form = "logIn" />}
+        />
+        <PrivateRoute path = "/(|home)" component={Timer} />        
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
