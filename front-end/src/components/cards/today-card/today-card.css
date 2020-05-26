@@ -1,0 +1,26 @@
+.today-card__panel {
+    background-color: #fff;
+    max-height: 300px;
+    color: var(--light-pink-main);
+    display: grid;
+    grid-template-columns: 30px auto;
+}
+
+.today-card__left-border {
+    height: 100%;
+    background-color: var(--light-pink-main)
+}
+
+.today-card__content {
+    padding: 18px;    
+}
+
+.today-card__title  {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+.today-card__title:hover  {
+    color: var(--pink-main)
+}

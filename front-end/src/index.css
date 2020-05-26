@@ -1,5 +1,19 @@
 :root {
   font-size: 16px;
+  
+  /* Set up variable colors */
+  --dark-main: #2D3436;
+  --grey-main: #636E72;
+  --light-grey-main: #DFE6E9;
+  --blue-main: #0984E3;
+  --light-blue-main: #74B9FF;
+  --light-pink-main: #FD79A8;
+  --pink-main: #E84393;
+  --light-green-main: #55EFC4;
+  --green-main: #00B894;
+  --light-yellow-main: #FFEAA7;
+  --yellow-main: #FDCB6E;
+
 }
 body {
   margin: 0;

@@ -10,16 +10,16 @@ class NavigationBar extends React.Component {
 
     render() {
         return <nav>
-            <h3>Make My Morning</h3>
-            <hr />
-            <li><Link to="/home">Home</Link></li>
-            <hr />
+            <div className = "navigation-bar__title">Make My Morning</div>
+            <hr/>
             <ul>
-                <li><Link to="/today">Today</Link></li>
-                <li><Link to="/tomorrow">Tomorrow</Link></li>
-                <li><Link to="/calendar">Calendar</Link></li>
-                <li><Link to="/tips">Tips</Link></li>
-                <li>
+                <li className = "navigation-bar__home_link"><Link to="/home">Home</Link></li>
+                <hr />
+                <li className = "navigation-bar__today_link"><Link to="/today">Today</Link></li>
+                <li className = "navigation-bar__tomorrow_link"><Link to="/tomorrow">Tomorrow</Link></li>
+                <li className = "navigation-bar__calendar_link"><Link to="/calendar">Calendar</Link></li>
+                <li className = "navigation-bar__user-setting-link">
+                    <div className = "navigation-bar__user_image"></div>
                     <Link to="/profile">
                         Setting
                     </Link>

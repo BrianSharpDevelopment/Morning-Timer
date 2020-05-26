@@ -1,0 +1,5 @@
+.calendar-card__panel {
+    background-color: #fff;
+    max-height: 300px;
+    color: var(--yellow-main);
+}

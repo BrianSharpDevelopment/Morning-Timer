@@ -1,12 +1,87 @@
 
 nav {
     width: 10rem;
+    max-width: 10rem;
     height: 100vh;
     position: fixed;
-    background-color: #636E72;
+    background-color: var(--dark-main);
 }
 
-nav h3 {
-    color: #74B9FF;
-    margin: 23px 46px;
+
+.navigation-bar__title {
+    font-size: 28px;
+    color: var(--light-blue-main);
+    margin: 20px 32px 18px 18px;
+    font-weight: 600;
 }
+
+ul {
+    list-style: none;
+    margin: 0px 10px;
+    height: 80%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul hr {
+    width: 100%;
+}
+ul > li {
+    padding: 8px 0px 8px 32px;
+}
+
+ul > li > a { text-decoration: none;}
+
+ul .navigation-bar__home_link a {
+    color: var(--light-grey-main);
+}
+
+ul .navigation-bar__home_link a:hover {
+    color: var(--grey-main);
+}
+
+ul .navigation-bar__today_link a {
+    color: var(--light-pink-main);
+}
+
+ul .navigation-bar__today_link a:hover {
+    color: var(--pink-main);
+}
+
+ul .navigation-bar__tomorrow_link a {
+    color: var(--light-green-main);
+}
+
+ul .navigation-bar__tomorrow_link a:hover {
+    color: var(--green-main);
+}
+
+ul .navigation-bar__calendar_link a {
+    color: var(--light-yellow-main);
+}
+
+ul .navigation-bar__calendar_link a:hover {
+    color: var(--yellow-main);
+}
+
+ul .navigation-bar__user-setting-link a {
+    color: var(--light-blue-main);
+}
+
+ul .navigation-bar__user-setting-link a:hover {
+    color: var(--blue-main);
+}
+
+
+ul .navigation-bar__user_image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: var(--light-blue-main);
+    border-radius: 50%;
+}
+ul li:last-child {
+    margin-top: auto;
+}
+

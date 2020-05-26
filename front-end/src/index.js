@@ -6,7 +6,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Timer from './components/timer/timer';
+// import Timer from './components/timer/timer';
+import Home from './pages/home/home';
 import SignupOrLoginForm from './components/signup-or-login/signup-or-login';
 import Cookie from 'js-cookie';
 
@@ -46,7 +47,7 @@ ReactDOM.render(
           path = "/(login)" 
           component={() => <SignupOrLoginForm form = "logIn" />}
         />
-        <PrivateRoute path = "/(|home)" component={Timer} />        
+        <PrivateRoute path = "/(|home)" component={Home} />        
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
